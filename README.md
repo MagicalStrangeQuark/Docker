@@ -23,6 +23,10 @@
     <a href="https://www.docker.com">https://www.docker.com</a>
 </h3>
 
+<h3 align="center">
+    <a href="https://hub.docker.com">Docker Hub</a>
+</h3>
+
 <h4 align="center">Installing</h4>
 
 ```bash
@@ -61,13 +65,7 @@
 	docker images
 ```
 
-<h4 align="center">Docker Hub</h4>
-
-```bash
-	https://hub.docker.com
-```
-
-<h4 align="center">Running NGINX Image</h4>
+<h4 align="center">Running NGINX image</h4>
 
 ```bash
 	docker pull nginx || docker pull nginx:stable
@@ -81,13 +79,13 @@
 	firefox --new-tab http://127.0.0.1:8080/
 ```
 
-<h4 align="center">Show running containers</h4>
+<h4 align="center">Show running container(s)</h4>
 
 ```bash
 	sudo docker container ls
 ```
 
-<h4 align="center">Show detailed information about docker process</h4>
+<h4 align="center">Show detailed information about Docker process</h4>
 
 ```bash
 	sudo docker info
@@ -99,7 +97,7 @@
 	sudo docker container stop <id>
 ```
 
-<h4 align="center">Show Docker Help</h4>
+<h4 align="center">Show Docker help</h4>
 
 ```bash
 	sudo docker --help
