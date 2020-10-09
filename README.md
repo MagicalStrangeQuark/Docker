@@ -55,8 +55,82 @@
 	sudo docker run hello-world
 ```
 
-<h4 align="center">Listing all Local Images</h4>
+<h4 align="center">Listing all local images</h4>
 
 ```bash
-	sudo docker images
+	docker images
+```
+
+<h4 align="center">Docker Hub</h4>
+
+```bash
+	https://hub.docker.com
+```
+
+<h4 align="center">Running NGINX Image</h4>
+
+```bash
+	docker pull nginx || docker pull nginx:stable
+```
+
+```bash
+	docker container run --publish 8080:80 --detach --name webserver nginx
+```
+
+```bash
+	firefox --new-tab http://127.0.0.1:8080/
+```
+
+<h4 align="center">Show running containers</h4>
+
+```bash
+	sudo docker container ls
+```
+
+<h4 align="center">Show detailed information about docker process</h4>
+
+```bash
+	sudo docker info
+```
+
+<h4 align="center">Stopping a Docker container</h4>
+
+```bash
+	sudo docker container stop <id>
+```
+
+<h4 align="center">Show Docker Help</h4>
+
+```bash
+	sudo docker --help
+```
+
+<h4 align="center">Remove one of more container(s)</h4>
+
+```bash
+	sudo docker container rm [<id> <id> <id> ...]
+```
+
+<h4 align="center">Restart a stopped process</h4>
+
+```bash
+	sudo docker container stop [<id> <id> <id> ...]
+```
+
+<h4 align="center">Show container processes</h4>
+
+```bash
+	sudo docker container top <id>
+```
+
+<h4 align="center">Show processes details</h4>
+
+```bash
+	sudo docker container inspect <id>
+```
+
+<h4 align="center">Show performace statistics of a container</h4>
+
+```bash
+	sudo docker container stats <id>
 ```
