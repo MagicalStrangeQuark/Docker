@@ -112,7 +112,7 @@
 <h4 align="center">Restart a stopped process</h4>
 
 ```bash
-	sudo docker container stop [<id> <id> <id> ...]
+	sudo docker container start [<id> <id> <id> ...]
 ```
 
 <h4 align="center">Show container processes</h4>
@@ -131,4 +131,34 @@
 
 ```bash
 	sudo docker container stats <id>
+```
+
+<h4 align="center">Ubuntu</h4>
+
+```bash
+	docker pull ubuntu
+
+	sudo docker container run -it --name ubuntu ubuntu /bin/bash
+	
+	apt-get update
+
+	apt-get install git
+
+	git --version
+
+	exit
+
+	docker container start <ubuntu-container-id>
+
+	docker container attach <ubuntu-container-id>
+```
+
+<h4 align="center">Run a command inside a container without enter in</h4>
+
+```bash
+	sudo docker container exec <container-id> <command>
+```
+
+```bash
+	sudo docker container exec 8e83ad7f335e ls -lh
 ```
