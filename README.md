@@ -1,6 +1,6 @@
 <p align="center"><img src="docker.svg" width="400"></p>
 
-<p align="center">Sample PHP Hello World app with  <a href="https://www.docker.com/">👉 Docker 👈</a></p>
+<p align="center">Sample <a href="https://www.docker.com/">👉 Docker 👈</a> study documentation</p>
 
 <p align="center">
     <a href="https://opensource.org/licenses/MIT">
