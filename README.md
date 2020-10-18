@@ -109,6 +109,12 @@
 	sudo docker container rm [<id> <id> <id> ...]
 ```
 
+<h4 align="center">Remove one of more image(s)</h4>
+
+```bash
+	sudo docker rmi [<id> <id> <id> ...]
+```
+
 <h4 align="center">Restart a stopped process</h4>
 
 ```bash
@@ -165,6 +171,12 @@
 
 <h4 align="center">Rename a container</h4>
 
+```bash
+	sudo docker container rename <old-container-name> <new-container-name>
 ```
-	sudo docker container rename OLD_NAME NEW_NAME
+
+<h4 align="center">Remove all images</h4>
+
+```bash
+	sudo docker system prune -a
 ```
