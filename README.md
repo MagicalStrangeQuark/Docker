@@ -162,3 +162,9 @@
 ```bash
 	sudo docker container exec 8e83ad7f335e ls -lh
 ```
+
+<h4 align="center">Rename a container</h4>
+
+```
+	sudo docker container rename OLD_NAME NEW_NAME
+```
