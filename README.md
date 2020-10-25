@@ -175,8 +175,20 @@
 	sudo docker container rename <old-container-name> <new-container-name>
 ```
 
+<h4 align="center">Remove all stopped container(s)</h4>
+
+```bash
+	sudo docker container prune
+```
+
 <h4 align="center">Remove all images</h4>
 
 ```bash
 	sudo docker system prune -a
+```
+
+<h4 align="center">Cloud9</h4>
+
+```bash
+	docker pull linuxserver/cloud9
 ```
