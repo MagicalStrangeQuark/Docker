@@ -192,3 +192,23 @@
 ```bash
 	docker pull linuxserver/cloud9
 ```
+
+<h4 align="center">Commit</h4>
+
+```bash
+	docker container run -it ubuntu
+
+	apt install wget
+
+	wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
+	source ~/.bashrc
+
+	nvm install node
+
+	node --version
+
+	exit
+
+	docker container commit -m "Adicionado nvm e wget" <container-id>
+```
