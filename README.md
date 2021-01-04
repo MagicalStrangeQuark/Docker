@@ -73,7 +73,7 @@
 ```
 
 ```bash
-	firefox --new-tab http://127.0.0.1:8080/
+	firefox --new-tab http://127.0.0.1:8080
 ```
 
 <h6 align="center">Show running container(s)</h6>
