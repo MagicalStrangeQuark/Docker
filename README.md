@@ -3,55 +3,52 @@
 <p align="center">Sample <a href="https://www.docker.com/">👉 Docker 👈</a> study documentation</p>
 
 <p align="center">
-    <a href="https://opensource.org/licenses/MIT">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+    <a href="#">
+        <img alt="License" src="https://img.shields.io/github/license/Whopag/Docker">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/languages/count/MagicalStrangeQuark/DockerPHPHelloWorld">
+        <img alt="License" src="https://img.shields.io/github/languages/count/Whopag/Docker">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/last-commit/MagicalStrangeQuark/DockerPHPHelloWorld">
-    </a>
-    <a href="#">
-        <img alt="License" src="https://img.shields.io/github/followers/MagicalStrangeQuark?style=social">
+        <img alt="License" src="https://img.shields.io/github/last-commit/Whopag/Docker">
     </a>
 </p>
 
 <h2 align="center">Website</h2>
+    
+<p align="center">
+	<a href="https://www.docker.com">https://www.docker.com</a>
+</p>
 
-<h3 align="center">
-    <a href="https://www.docker.com">https://www.docker.com</a>
-</h3>
+<p align="center">
+    <a href="https://hub.docker.com">https://hub.docker.com</a>
+</p>
 
-<h3 align="center">
-    <a href="https://hub.docker.com">Docker Hub</a>
-</h3>
-
-<h4 align="center">Installing</h4>
+<h6 align="center">Installing</h6>
 
 ```bash
 	sudo pacman -Sy docker
 ```
 
-<h4 align="center">Starting Service</h4>
+<h6 align="center">Starting Service</h6>
 
 ```bash
 	sudo systemctl start docker.service
 ```
 
-<h4 align="center">Stopping Service</h4>
+<h6 align="center">Stopping Service</h6>
 
 ```bash
 	sudo systemctl stop docker.service
 ```
 
-<h4 align="center">Starting On System Boot</h4>
+<h6 align="center">Starting On System Boot</h6>
 
 ```bash
 	sudo systemctl enable docker.service
 ```
 
-<h4 align="center">Testing the Installation</h4>
+<h6 align="center">Testing the Installation</h6>
 
 ```bash
 	docker -v || docker --version || docker version
@@ -59,13 +56,13 @@
 	sudo docker run hello-world
 ```
 
-<h4 align="center">Listing all local images</h4>
+<h6 align="center">Listing all local images</h6>
 
 ```bash
 	docker images
 ```
 
-<h4 align="center">Running NGINX image</h4>
+<h6 align="center">Running NGINX image</h6>
 
 ```bash
 	docker pull nginx || docker pull nginx:stable
@@ -79,67 +76,67 @@
 	firefox --new-tab http://127.0.0.1:8080/
 ```
 
-<h4 align="center">Show running container(s)</h4>
+<h6 align="center">Show running container(s)</h6>
 
 ```bash
 	sudo docker container ls
 ```
 
-<h4 align="center">Show detailed information about Docker process</h4>
+<h6 align="center">Show detailed information about Docker process</h6>
 
 ```bash
 	sudo docker info
 ```
 
-<h4 align="center">Stopping a Docker container</h4>
+<h6 align="center">Stopping a Docker container</h6>
 
 ```bash
 	sudo docker container stop <id>
 ```
 
-<h4 align="center">Show Docker help</h4>
+<h6 align="center">Show Docker help</h6>
 
 ```bash
 	sudo docker --help
 ```
 
-<h4 align="center">Remove one of more container(s)</h4>
+<h6 align="center">Remove one of more container(s)</h6>
 
 ```bash
 	sudo docker container rm [<id> <id> <id> ...]
 ```
 
-<h4 align="center">Remove one of more image(s)</h4>
+<h6 align="center">Remove one of more image(s)</h6>
 
 ```bash
 	sudo docker rmi [<id> <id> <id> ...]
 ```
 
-<h4 align="center">Restart a stopped process</h4>
+<h6 align="center">Restart a stopped process</h6>
 
 ```bash
 	sudo docker container start [<id> <id> <id> ...]
 ```
 
-<h4 align="center">Show container processes</h4>
+<h6 align="center">Show container processes</h6>
 
 ```bash
 	sudo docker container top <id>
 ```
 
-<h4 align="center">Show processes details</h4>
+<h6 align="center">Show processes details</h6>
 
 ```bash
 	sudo docker container inspect <id>
 ```
 
-<h4 align="center">Show performace statistics of a container</h4>
+<h6 align="center">Show performace statistics of a container</h6>
 
 ```bash
 	sudo docker container stats <id>
 ```
 
-<h4 align="center">Ubuntu</h4>
+<h6 align="center">Ubuntu</h6>
 
 ```bash
 	docker pull ubuntu
@@ -159,7 +156,7 @@
 	docker container attach <ubuntu-container-id>
 ```
 
-<h4 align="center">Run a command inside a container without enter in</h4>
+<h6 align="center">Run a command inside a container without enter in</h6>
 
 ```bash
 	sudo docker container exec <container-id> <command>
@@ -169,31 +166,31 @@
 	sudo docker container exec 8e83ad7f335e ls -lh
 ```
 
-<h4 align="center">Rename a container</h4>
+<h6 align="center">Rename a container</h6>
 
 ```bash
 	sudo docker container rename <old-container-name> <new-container-name>
 ```
 
-<h4 align="center">Remove all stopped container(s)</h4>
+<h6 align="center">Remove all stopped container(s)</h6>
 
 ```bash
 	sudo docker container prune
 ```
 
-<h4 align="center">Remove all images</h4>
+<h6 align="center">Remove all images</h6>
 
 ```bash
 	sudo docker system prune -a
 ```
 
-<h4 align="center">Cloud9</h4>
+<h6 align="center">Cloud9</h6>
 
 ```bash
 	docker pull linuxserver/cloud9
 ```
 
-<h4 align="center">Commit</h4>
+<h6 align="center">Commit</h6>
 
 ```bash
 	docker container run -it ubuntu
@@ -213,7 +210,7 @@
 	docker container commit -m "Adicionado nvm e wget" <container-id>
 ```
 
-<h4 align="center">History</h4>
+<h6 align="center">History</h6>
 
 ```bash
 	docker image history <image-id>
