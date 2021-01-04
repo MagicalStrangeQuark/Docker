@@ -212,3 +212,9 @@
 
 	docker container commit -m "Adicionado nvm e wget" <container-id>
 ```
+
+<h4 align="center">History</h4>
+
+```bash
+	docker image history <image-id>
+```
