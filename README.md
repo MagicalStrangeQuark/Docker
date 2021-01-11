@@ -223,5 +223,13 @@
 
 	docker network ls
 
+	docker network inspect network-test
+
 	docker network rn network-test
+```
+
+```bash
+	docker pull postgres:latest
+	
+	docker run --name some-postgres -e POSTGRES_PASSWORD=secret -p 5432:5432 -v "$($pwd)/data:/var/lib/postgresql/data" -d postgres:latest
 ```
