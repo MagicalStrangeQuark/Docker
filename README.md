@@ -215,3 +215,13 @@
 ```bash
 	docker image history <image-id>
 ```
+
+<h6 align="center">Network</h6>
+
+```bash
+	docker network create network-test
+
+	docker network ls
+
+	docker network rn network-test
+```
