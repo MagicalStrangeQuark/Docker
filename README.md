@@ -233,3 +233,18 @@
 	
 	docker run --name some-postgres -e POSTGRES_PASSWORD=secret -p 5432:5432 -v "$($pwd)/data:/var/lib/postgresql/data" -d postgres:latest
 ```
+
+<h6 align="center">Dockerfile</h6>
+
+```bash
+	FROM ubuntu:latest
+	LABEL maintainer="Wesley Flôres"
+```
+
+```bash
+	docker build -t wesleyflores/ubuntu:latest .
+```
+
+```bash
+	docker build -t wesleyflores/ubuntu:latest Dockerfile
+```
