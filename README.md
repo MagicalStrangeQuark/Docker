@@ -236,7 +236,7 @@
 
 <h6 align="center">Dockerfile</h6>
 
-```bash
+```Dockerfile
 	FROM ubuntu:latest
 	LABEL maintainer="Wesley Flôres"
 ```
