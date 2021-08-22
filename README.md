@@ -29,25 +29,25 @@
 <h6 align="center">Installing On Manjaro</h6>
 
 ```bash
-	sudo pacman -Sy docker
+	pacman -Sy docker
 ```
 
 <h6 align="center">Starting Service</h6>
 
 ```bash
-	sudo systemctl start docker.service
+	systemctl start docker.service
 ```
 
 <h6 align="center">Stopping Service</h6>
 
 ```bash
-	sudo systemctl stop docker.service
+	systemctl stop docker.service
 ```
 
 <h6 align="center">Starting On System Boot</h6>
 
 ```bash
-	sudo systemctl enable docker.service
+	systemctl enable docker.service
 ```
 
 <h6 align="center">Testing the Installation</h6>
@@ -57,7 +57,7 @@
 ```
 
 ```bash
-	sudo docker run hello-world
+	docker container run -it hello-world
 ```
 
 <h6 align="center">Listing all local images</h6>
@@ -83,61 +83,61 @@
 <h6 align="center">Show running container(s)</h6>
 
 ```bash
-	sudo docker container ls
+	docker container ls
 ```
 
 <h6 align="center">Show detailed information about Docker process</h6>
 
 ```bash
-	sudo docker info
+	docker info
 ```
 
 <h6 align="center">Show Docker help</h6>
 
 ```bash
-	sudo docker --help
+	docker --help
 ```
 
 <h6 align="center">Stopping a Docker container</h6>
 
 ```bash
-	sudo docker container stop <id>
+	docker container stop <id>
 ```
 
 <h6 align="center">Remove one of more container(s)</h6>
 
 ```bash
-	sudo docker container rm [<id> <id> <id> ...]
+	docker container rm [<id> <id> <id> ...]
 ```
 
 <h6 align="center">Remove one of more image(s)</h6>
 
 ```bash
-	sudo docker rmi [<id> <id> <id> ...]
+	docker rmi [<id> <id> <id> ...]
 ```
 
 <h6 align="center">Restart a stopped process</h6>
 
 ```bash
-	sudo docker container start [<id> <id> <id> ...]
+	docker container start [<id> <id> <id> ...]
 ```
 
 <h6 align="center">Show container processes</h6>
 
 ```bash
-	sudo docker container top <id>
+	docker container top <id>
 ```
 
 <h6 align="center">Show processes details</h6>
 
 ```bash
-	sudo docker container inspect <id>
+	docker container inspect <id>
 ```
 
 <h6 align="center">Show performace statistics of a container</h6>
 
 ```bash
-	sudo docker container stats <id>
+	docker container stats <id>
 ```
 
 <h6 align="center">Ubuntu</h6>
@@ -145,7 +145,7 @@
 ```bash
 	docker pull ubuntu
 
-	sudo docker container run -it --name ubuntu ubuntu /bin/bash
+	docker container run -it --name ubuntu ubuntu /bin/bash
 	
 	apt-get update
 
@@ -163,29 +163,29 @@
 <h6 align="center">Run a command inside a container without enter in</h6>
 
 ```bash
-	sudo docker container exec <container-id> <command>
+	docker container exec <container-id> <command>
 ```
 
 ```bash
-	sudo docker container exec 8e83ad7f335e ls -lh
+	docker container exec 8e83ad7f335e ls -lh
 ```
 
 <h6 align="center">Rename a container</h6>
 
 ```bash
-	sudo docker container rename <old-container-name> <new-container-name>
+	docker container rename <old-container-name> <new-container-name>
 ```
 
 <h6 align="center">Remove all stopped container(s)</h6>
 
 ```bash
-	sudo docker container prune
+	docker container prune
 ```
 
 <h6 align="center">Remove all images</h6>
 
 ```bash
-	sudo docker system prune -a
+	docker system prune -a
 ```
 
 <h6 align="center">Cloud9</h6>
