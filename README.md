@@ -140,6 +140,12 @@
 	docker container stats <id>
 ```
 
+<h6 align="center">If we kill the entry point process, we kill the container, so we can use `ctrl + pq`</h6>
+
+```bash
+	docker container run -it ubuntu
+```
+
 <h6 align="center">Ubuntu</h6>
 
 ```bash
