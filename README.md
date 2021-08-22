@@ -1,30 +1,32 @@
 <p align="center"><img src="docker.svg" width="400"></p>
 
-<p align="center">Sample <a href="https://www.docker.com/">👉 Docker 👈</a> study documentation</p>
+<p align="center">Sample <a href="https://www.docker.com">👉 Docker 👈</a> study documentation</p>
 
 <p align="center">
     <a href="#">
         <img alt="License" src="https://img.shields.io/github/license/Whopag/Docker">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/languages/count/Whopag/Docker">
+        <img alt="Languages" src="https://img.shields.io/github/languages/count/Whopag/Docker">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/last-commit/Whopag/Docker">
+        <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Whopag/Docker">
     </a>
 </p>
 
-<h2 align="center">Website</h2>
+<h6 align="center">Website</h6>
     
 <p align="center">
 	<a href="https://www.docker.com">https://www.docker.com</a>
 </p>
 
+<h6 align="center">Docker Hub</h6>
+
 <p align="center">
     <a href="https://hub.docker.com">https://hub.docker.com</a>
 </p>
 
-<h6 align="center">Installing</h6>
+<h6 align="center">Installing On Manjaro</h6>
 
 ```bash
 	sudo pacman -Sy docker
@@ -52,7 +54,9 @@
 
 ```bash
 	docker -v || docker --version || docker version
+```
 
+```bash
 	sudo docker run hello-world
 ```
 
@@ -65,7 +69,7 @@
 <h6 align="center">Running NGINX image</h6>
 
 ```bash
-	docker pull nginx || docker pull nginx:stable
+	docker pull nginx:stable
 ```
 
 ```bash
@@ -88,16 +92,16 @@
 	sudo docker info
 ```
 
-<h6 align="center">Stopping a Docker container</h6>
-
-```bash
-	sudo docker container stop <id>
-```
-
 <h6 align="center">Show Docker help</h6>
 
 ```bash
 	sudo docker --help
+```
+
+<h6 align="center">Stopping a Docker container</h6>
+
+```bash
+	sudo docker container stop <id>
 ```
 
 <h6 align="center">Remove one of more container(s)</h6>
