@@ -143,7 +143,9 @@
 <h6 align="center">If we kill the entry point process, we kill the container, so we can use `ctrl + pq`</h6>
 
 ```bash
-	docker container run -it ubuntu
+	docker container run --name admiring_burnell -it ubuntu
+
+	docker container attach admiring_burnell
 ```
 
 <h6 align="center">Ubuntu</h6>
