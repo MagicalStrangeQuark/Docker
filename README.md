@@ -83,6 +83,16 @@
 	firefox --new-tab http://127.0.0.1:8080
 ```
 
+<h6 align="center">Setting up Memory Limit in 128M and CPU to 0.5 Core</h6>
+
+```bash
+	docker container run -d -p 8080:80 -m 128M --cpus 0.5 --name nginx nginx
+
+	docker container inspect --format='{{.HostConfig.Memory}}' nginx
+
+	docker container inspect --format='{{.HostConfig.NanoCpus}}' nginx
+```
+
 <h6 align="center">Show running container(s)</h6>
 
 ```bash
