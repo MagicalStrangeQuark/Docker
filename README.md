@@ -9,6 +9,9 @@
     <a href="#">
         <img alt="Languages" src="https://img.shields.io/github/languages/count/Whopag/Docker">
     </a>
+	<a href="#">
+        <img alt="Repository Size" src="https://img.shields.io/github/repo-size/Whopag/Docker">
+    </a>
     <a href="#">
         <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Whopag/Docker">
     </a>
@@ -244,6 +247,12 @@
 	docker pull postgres:latest
 	
 	docker run --name some-postgres -e POSTGRES_PASSWORD=secret -p 5432:5432 -v "$($pwd)/data:/var/lib/postgresql/data" -d postgres:latest
+```
+
+<h6 align="center">Logs</h6>
+
+```bash
+	docker container logs -f admiring_burnell
 ```
 
 <h6 align="center">Dockerfile</h6>
