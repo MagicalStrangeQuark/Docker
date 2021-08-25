@@ -93,6 +93,12 @@
 	docker container inspect --format='{{.HostConfig.NanoCpus}}' nginx
 ```
 
+<h6 align="center">Update container CPU Usage on the Fly</h6>
+
+```bash
+	docker container update --cpus 0.2 nginx
+```
+
 <h6 align="center">Show running container(s)</h6>
 
 ```bash
