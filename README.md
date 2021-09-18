@@ -285,3 +285,15 @@
 ```bash
 	docker build -t wesleyflores/ubuntu:latest Dockerfile
 ```
+
+```bash
+	FROM ubuntu:latest
+
+	LABEL APP="ubuntu-server"
+
+	ENV APP_VERSION="1.0.5"
+
+	RUN apt-get update && apt-get install -y stress && apt-get clean
+
+	CMD stress --cpu 1 --vm-bytes 64M --vm 1
+```
