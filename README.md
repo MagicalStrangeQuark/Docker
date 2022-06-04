@@ -1,4 +1,4 @@
-<p align="center"><img src="docker.svg" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/MagicalStrangeQuark/MagicalStrangeQuark/master/assets/docker.svg" width="400"></p>
 
 <p align="center">Sample <a href="https://www.docker.com">👉 Docker 👈</a> study documentation</p>
 
