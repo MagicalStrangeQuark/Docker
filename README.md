@@ -247,6 +247,50 @@
 	docker image history <image-id>
 ```
 
+<h6 align="center">Volumes</h6>
+
+mkdir /Users/wesleyterres/Workspace/Docker/giropops
+
+docker container run -it --mount type=bind,source=/Users/wesleyterres/Workspace/Docker/giropops,destination=/giropops ubuntu
+
+docker container run -it --mount type=bind,source=/Users/wesleyterres/Workspace/Docker/giropops,destination=/giropops,ro ubuntu
+
+docker volume create giropops 
+
+docker volume inspect giropops
+
+docker volume rm giropops
+
+docker volume prune
+
+docker run -it --privileged --pid=host ubuntu nsenter -t 1 -a bash
+
+ls /var/lib/docker/volumes/giropops/_data
+
+touch BANANAS
+touch APPLES
+
+docker container run -it --mount type=volume,source=giropops,destination=/giropops ubuntu
+
+docker container create -v /Users/wesleyterres/Workspace/Docker/giropops --name dbdados centos
+
+docker container run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+
+docker container run -it --mount type=volume,src=dbdados,dst=/data --mount type=bind,src=/opt/backup,dst=/backup ubuntu tar -cvf /backup/bkp-banco.tar /data
+
+docker container run -ti --mount type=bind,src=/volume,dst=/volume ubuntu
+docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume ubuntu
+docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume,ro ubuntu
+docker volume create giropops
+docker volume inspect giropops
+docker volume rm giropops
+docker volume prune
+docker container run -d --mount type=volume,source=giropops,destination=/var/opa  nginx
+docker container create -v /data --name dbdados centos
+docker run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+docker run -d -p 5433:5432 --name pgsql2 --volumes-from dbdados -e  POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+docker run -ti --volumes-from dbdados -v $(pwd):/backup debian tar -cvf /backup/backup.tar /data
+
 <h6 align="center">Network</h6>
 
 ```bash
@@ -296,4 +340,26 @@
 	RUN apt-get update && apt-get install -y stress && apt-get clean
 
 	CMD stress --cpu 1 --vm-bytes 64M --vm 1
+```
+
+<h6 align="center">Remove all images</h6>
+
+```bash
+    docker rmi -f $(docker images -aq)
+```
+
+<h6 align="center">Stop all running containers</h6>
+
+```bash
+    docker stop $(docker ps -a -q)
+```
+
+<h6 align="center">PgAdmin4</h6>
+
+```bash
+	docker run --name db -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres:latest
+```
+
+```bash
+	sudo docker run -p 8080:80 --link db:postgres -e "PGADMIN_DEFAULT_EMAIL=wesleyfloresterres@gmail.com" -e "PGADMIN_DEFAULT_PASSWORD=password" -d dpage/pgadmin4:latest
 ```
