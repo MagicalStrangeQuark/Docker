@@ -533,10 +533,44 @@ docker-machine ls
 ```
 
 ```bash
+docker-machine ssh giropops
+```
+
+```bash
+docker container run -d -p 8080:80 nginx 
+```
+
+```bash
+exit
+```
+
+```bash
+curl $(docker-machine ip giropops):8080
+```
+
+```bash
+docker-machine inspect giropops
+```
+
+```bash
+docker-machine status giropops
+```
+
+```bash
+docker-machine stop giropops
+```
+
+```bash
+docker-machine start giropops
+```
+
+```bash
 docker-machine rm giropops
 ```
 
-docker-machine ssh giropops
+```bash
+docker-machine env -u && eval $(docker-machine env -u)
+```
 
 <h6 align="center">Run this command to configure your shell:</h6>
 
